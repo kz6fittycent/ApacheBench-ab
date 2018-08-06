@@ -24,3 +24,5 @@ parts:
       - wget
       - make
       - gcc
+      - libapr1-dev
+      - libaprutil1-dev
