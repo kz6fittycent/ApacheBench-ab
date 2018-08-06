@@ -1,0 +1,21 @@
+name: apachebench # 
+version: '1.0+git' # 
+summary: Stand alone apache bench - Apache HTTP server benchmarking tool # 79 char long summary
+description: |
+  Stand alone apache bench - Apache HTTP server benchmarking tool, a.k.a. "ab".
+  
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  apachebench:
+    command: ab
+    plugs:
+      - home
+      - network
+     
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/ApacheBench-ab
+    source-type: git
+    plugin: make
